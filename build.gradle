@@ -1,0 +1,23 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.14'
+}
+
+repositories {
+    mavenCentral()
+}
+
+javafx {
+    version = "21"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
+application {
+    mainClass = 'it.mailserver.Main'
+}
+
+run {
+    jvmArgs = [
+            "--add-modules", "javafx.controls,javafx.fxml"
+    ]
+}
